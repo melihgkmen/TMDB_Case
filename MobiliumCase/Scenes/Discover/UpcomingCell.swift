@@ -16,13 +16,10 @@ class UpcomingCell: UITableViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     override func prepareForReuse() {
@@ -37,8 +34,8 @@ class UpcomingCell: UITableViewCell {
             ], progressBlock: nil)
         }
         self.titleLabel.text = movie.title
-        self.originalTitleLabel.text = movie.original_title
-        self.infoLabel.text = movie.overview
+        self.originalTitleLabel.text = movie.overview
+        self.infoLabel.text = movie.release_date
         
     }
 

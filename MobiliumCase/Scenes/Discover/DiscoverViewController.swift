@@ -50,11 +50,11 @@ class DiscoverViewController: UIViewController {
     }
     
     @objc func refresh(_ sender: Any) {
-        self.viewModel.refreshData { [weak self] in
-            DispatchQueue.main.async {
-                self?.pagerView.scrollToItem(at: Int(0), animated: false)
-                self?.refreshControl.endRefreshing()
-            }
+        self.viewModel.fetchUpcoming { [unowned self] in
+            self.upcomingTableView.reloadData()
+        }
+        self.viewModel.updateNowPlaying { [unowned self] in
+            self.pagerView.reloadData()
         }
      }
 
