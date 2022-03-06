@@ -26,6 +26,11 @@
 		849094202424BAED0084EC5A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490941F2424BAED0084EC5A /* SearchCell.swift */; };
 		849094222424BB160084EC5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849094212424BB160084EC5A /* SearchViewController.swift */; };
 		849094242424C50E0084EC5A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849094232424C50E0084EC5A /* DetailViewController.swift */; };
+		9F7A46CA27D53E9200CEE859 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A46C927D53E9100CEE859 /* Coordinator.swift */; };
+		9F7A46CC27D53EBC00CEE859 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A46CB27D53EBC00CEE859 /* AppCoordinator.swift */; };
+		9F7A46CE27D53F2E00CEE859 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A46CD27D53F2E00CEE859 /* DiscoverCoordinator.swift */; };
+		9F7A46D027D5402300CEE859 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A46CF27D5402300CEE859 /* DetailCoordinator.swift */; };
+		9F7A46D227D5414700CEE859 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A46D127D5414700CEE859 /* Storyboarded.swift */; };
 		9F97D19C27D4FCB00088A0BD /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97D19B27D4FCB00088A0BD /* WebDetailViewController.swift */; };
 		9F97D19E27D4FCC50088A0BD /* WebDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97D19D27D4FCC50088A0BD /* WebDetailViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,11 @@
 		8490941F2424BAED0084EC5A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		849094212424BB160084EC5A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		849094232424C50E0084EC5A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F7A46C927D53E9100CEE859 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9F7A46CB27D53EBC00CEE859 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9F7A46CD27D53F2E00CEE859 /* DiscoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoordinator.swift; sourceTree = "<group>"; };
+		9F7A46CF27D5402300CEE859 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		9F7A46D127D5414700CEE859 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		9F97D19B27D4FCB00088A0BD /* WebDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
 		9F97D19D27D4FCC50088A0BD /* WebDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,15 +110,11 @@
 		847CFCF2242135040054577E /* MobiliumCase */ = {
 			isa = PBXGroup;
 			children = (
+				9F7A46C827D53E1E00CEE859 /* Resources */,
 				847CFD2A242248180054577E /* Scenes */,
 				847CFD2024220F330054577E /* Model */,
 				847CFD0C2421F7240054577E /* Network */,
 				8490941B2424A06F0084EC5A /* Utils */,
-				847CFCF3242135040054577E /* AppDelegate.swift */,
-				847CFCF5242135040054577E /* SceneDelegate.swift */,
-				847CFCF7242135040054577E /* NavigatorViewController.swift */,
-				847CFCF9242135040054577E /* Main.storyboard */,
-				847CFCFE242135060054577E /* LaunchScreen.storyboard */,
 				847CFCFC242135060054577E /* Assets.xcassets */,
 				847CFD01242135060054577E /* Info.plist */,
 			);
@@ -149,6 +155,7 @@
 				847CFD34242349AA0054577E /* DiscoverViewController.swift */,
 				847CFD082421F7070054577E /* DiscoverViewModel.swift */,
 				84909419242497DD0084EC5A /* UpcomingCell.swift */,
+				9F7A46CD27D53F2E00CEE859 /* DiscoverCoordinator.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 			children = (
 				849094232424C50E0084EC5A /* DetailViewController.swift */,
 				849094172423F91E0084EC5A /* DetailViewModel.swift */,
+				9F7A46CF27D5402300CEE859 /* DetailCoordinator.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -178,6 +186,21 @@
 				8490941C2424A08A0084EC5A /* PictureUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9F7A46C827D53E1E00CEE859 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				847CFCF3242135040054577E /* AppDelegate.swift */,
+				847CFCF5242135040054577E /* SceneDelegate.swift */,
+				847CFCF7242135040054577E /* NavigatorViewController.swift */,
+				847CFCF9242135040054577E /* Main.storyboard */,
+				847CFCFE242135060054577E /* LaunchScreen.storyboard */,
+				9F7A46C927D53E9100CEE859 /* Coordinator.swift */,
+				9F7A46CB27D53EBC00CEE859 /* AppCoordinator.swift */,
+				9F7A46D127D5414700CEE859 /* Storyboarded.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9F97D19A27D4FC8E0088A0BD /* WebDetail */ = {
@@ -312,20 +335,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7A46D027D5402300CEE859 /* DetailCoordinator.swift in Sources */,
 				849094202424BAED0084EC5A /* SearchCell.swift in Sources */,
 				847CFD35242349AA0054577E /* DiscoverViewController.swift in Sources */,
 				847CFD0E2421F73D0054577E /* DataProvider.swift in Sources */,
 				8490941A242497DD0084EC5A /* UpcomingCell.swift in Sources */,
 				847CFCF8242135040054577E /* NavigatorViewController.swift in Sources */,
 				849094182423F91E0084EC5A /* DetailViewModel.swift in Sources */,
+				9F7A46D227D5414700CEE859 /* Storyboarded.swift in Sources */,
 				847CFD0B2421F7180054577E /* SearchViewModel.swift in Sources */,
+				9F7A46CE27D53F2E00CEE859 /* DiscoverCoordinator.swift in Sources */,
 				847CFD092421F7070054577E /* DiscoverViewModel.swift in Sources */,
+				9F7A46CA27D53E9200CEE859 /* Coordinator.swift in Sources */,
 				9F97D19C27D4FCB00088A0BD /* WebDetailViewController.swift in Sources */,
 				849094222424BB160084EC5A /* SearchViewController.swift in Sources */,
 				847CFCF4242135040054577E /* AppDelegate.swift in Sources */,
 				847CFCF6242135040054577E /* SceneDelegate.swift in Sources */,
 				847CFD25242210C40054577E /* MovieList.swift in Sources */,
 				9F97D19E27D4FCC50088A0BD /* WebDetailViewModel.swift in Sources */,
+				9F7A46CC27D53EBC00CEE859 /* AppCoordinator.swift in Sources */,
 				849094242424C50E0084EC5A /* DetailViewController.swift in Sources */,
 				8490941D2424A08A0084EC5A /* PictureUtils.swift in Sources */,
 				847CFD2924223A600054577E /* MovieDetail.swift in Sources */,

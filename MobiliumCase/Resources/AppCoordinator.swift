@@ -1,10 +1,11 @@
 //
 //  AppCoordinator.swift
-//  MobiliumCase
+//  TMDB_Case
 //
 //  Created by Melih Gökmen on 6.03.2022.
 //
 
+/*
 import UIKit
 import Foundation
 
@@ -19,10 +20,11 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         let navigationController = UINavigationController()
-        let characterListCoordinator = CharacterListCoordinator(navigationController: navigationController)
-        childCoordinators.append(characterListCoordinator)
-        characterListCoordinator.start()
+        let discoverCoordinator = DiscoverCoordinator(navigationController: navigationController)
+        childCoordinators.append(discoverCoordinator)
+        discoverCoordinator.start()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }
+*/
